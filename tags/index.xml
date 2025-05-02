@@ -11,11 +11,60 @@
 	
 	
 	<item>
-		<title>Test1</title>
-		<link>http://localhost:1313/test1/</link>
+		<title>Awesome</title>
+		<link>http://localhost:1313/projects/awesome/</link>
+		<pubDate>Wed, 23 Apr 2025 15:49:27 -0400</pubDate>
+		
+		<guid>http://localhost:1313/projects/awesome/</guid>
+		<description></description>
+	</item>
+	
+	<item>
+		<title>Kino</title>
+		<link>http://localhost:1313/kino/</link>
+		<pubDate>Wed, 23 Apr 2025 15:48:37 -0400</pubDate>
+		
+		<guid>http://localhost:1313/kino/</guid>
+		<description></description>
+	</item>
+	
+	<item>
+		<title>Test</title>
+		<link>http://localhost:1313/test/</link>
+		<pubDate>Wed, 23 Apr 2025 15:43:23 -0400</pubDate>
+		
+		<guid>http://localhost:1313/test/</guid>
+		<description></description>
+	</item>
+	
+	<item>
+		<title>poopy</title>
+		<link>http://localhost:1313/articles/awesome1/</link>
 		<pubDate>Fri, 18 Apr 2025 14:23:36 -0400</pubDate>
 		
-		<guid>http://localhost:1313/test1/</guid>
+		<guid>http://localhost:1313/articles/awesome1/</guid>
+		<description>&lt;p&gt;awesome&lt;/p&gt;
+&lt;p&gt;homepage stuffs&lt;/p&gt;
+</description>
+	</item>
+	
+	<item>
+		<title>poopy</title>
+		<link>http://localhost:1313/projects/pingas/</link>
+		<pubDate>Fri, 18 Apr 2025 14:23:36 -0400</pubDate>
+		
+		<guid>http://localhost:1313/projects/pingas/</guid>
+		<description>&lt;p&gt;awesome&lt;/p&gt;
+&lt;p&gt;homepage stuffs&lt;/p&gt;
+</description>
+	</item>
+	
+	<item>
+		<title>Test1</title>
+		<link>http://localhost:1313/articles/test1/</link>
+		<pubDate>Fri, 18 Apr 2025 14:23:36 -0400</pubDate>
+		
+		<guid>http://localhost:1313/articles/test1/</guid>
 		<description>&lt;h1 id=&#34;this-is-a-title&#34;&gt;This is a title&lt;/h1&gt;
 &lt;p&gt;lol 123&lt;/p&gt;
 &lt;h2 id=&#34;i-hate-this&#34;&gt;I hate this&lt;/h2&gt;
