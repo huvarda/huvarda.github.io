@@ -1,91 +1,50 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
 	<title>My New Hugo Site</title>
-	<link>http://localhost:1313/</link>
+	<link>https://huvarda.github.io/</link>
 	<description>Recent content in huvarda&#39;s website on My New Hugo Site</description>
 	<generator>Hugo -- gohugo.io</generator>
 	<language>en-us</language>
-	<lastBuildDate>Wed, 23 Apr 2025 15:49:27 -0400</lastBuildDate>
+	<lastBuildDate>Fri, 02 May 2025 19:40:46 -0400</lastBuildDate>
     
-        <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://huvarda.github.io/index.xml" rel="self" type="application/rss+xml" />
 	
 	
 	<item>
-		<title>Awesome</title>
-		<link>http://localhost:1313/projects/awesome/</link>
-		<pubDate>Wed, 23 Apr 2025 15:49:27 -0400</pubDate>
+		<title>Kinoer</title>
+		<link>https://huvarda.github.io/blogs/kinoer/</link>
+		<pubDate>Fri, 02 May 2025 19:40:46 -0400</pubDate>
 		
-		<guid>http://localhost:1313/projects/awesome/</guid>
+		<guid>https://huvarda.github.io/blogs/kinoer/</guid>
 		<description></description>
 	</item>
 	
 	<item>
 		<title>Kino</title>
-		<link>http://localhost:1313/kino/</link>
-		<pubDate>Wed, 23 Apr 2025 15:48:37 -0400</pubDate>
+		<link>https://huvarda.github.io/kino/</link>
+		<pubDate>Fri, 02 May 2025 19:37:58 -0400</pubDate>
 		
-		<guid>http://localhost:1313/kino/</guid>
+		<guid>https://huvarda.github.io/kino/</guid>
 		<description></description>
 	</item>
 	
 	<item>
-		<title>Test</title>
-		<link>http://localhost:1313/test/</link>
-		<pubDate>Wed, 23 Apr 2025 15:43:23 -0400</pubDate>
+		<title>Awesome</title>
+		<link>https://huvarda.github.io/awesome/</link>
+		<pubDate>Fri, 02 May 2025 19:34:50 -0400</pubDate>
 		
-		<guid>http://localhost:1313/test/</guid>
+		<guid>https://huvarda.github.io/awesome/</guid>
 		<description></description>
 	</item>
 	
 	<item>
 		<title>poopy</title>
-		<link>http://localhost:1313/articles/awesome1/</link>
+		<link>https://huvarda.github.io/projects/pingas/</link>
 		<pubDate>Fri, 18 Apr 2025 14:23:36 -0400</pubDate>
 		
-		<guid>http://localhost:1313/articles/awesome1/</guid>
+		<guid>https://huvarda.github.io/projects/pingas/</guid>
 		<description>&lt;p&gt;awesome&lt;/p&gt;
 &lt;p&gt;homepage stuffs&lt;/p&gt;
-</description>
-	</item>
-	
-	<item>
-		<title>poopy</title>
-		<link>http://localhost:1313/projects/pingas/</link>
-		<pubDate>Fri, 18 Apr 2025 14:23:36 -0400</pubDate>
-		
-		<guid>http://localhost:1313/projects/pingas/</guid>
-		<description>&lt;p&gt;awesome&lt;/p&gt;
-&lt;p&gt;homepage stuffs&lt;/p&gt;
-</description>
-	</item>
-	
-	<item>
-		<title>Test1</title>
-		<link>http://localhost:1313/articles/test1/</link>
-		<pubDate>Fri, 18 Apr 2025 14:23:36 -0400</pubDate>
-		
-		<guid>http://localhost:1313/articles/test1/</guid>
-		<description>&lt;h1 id=&#34;this-is-a-title&#34;&gt;This is a title&lt;/h1&gt;
-&lt;p&gt;lol 123&lt;/p&gt;
-&lt;h2 id=&#34;i-hate-this&#34;&gt;I hate this&lt;/h2&gt;
-&lt;h3 id=&#34;nevermind&#34;&gt;Nevermind&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;table&gt;
-  &lt;thead&gt;
-      &lt;tr&gt;
-          &lt;th&gt;lol&lt;/th&gt;
-          &lt;th&gt;bro&lt;/th&gt;
-      &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-      &lt;tr&gt;
-          &lt;td&gt;kino&lt;/td&gt;
-          &lt;td&gt;sdf&lt;/td&gt;
-      &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
 </description>
 	</item>
 	
