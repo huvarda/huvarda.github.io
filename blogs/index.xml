@@ -11,41 +11,24 @@
 	
 	
 	<item>
+		<title>This Website</title>
+		<link>https://huvarda.github.io/projects/this_website/</link>
+		<pubDate>Mon, 05 May 2025 00:00:00 +0000</pubDate>
+		
+		<guid>https://huvarda.github.io/projects/this_website/</guid>
+		<description>&lt;p&gt;Hey everyone! This is the first *actual* post I&amp;rsquo;m writing for my website (the previous projects on the list are things I had written back in high school for my old site). And what better to write about than the process of developing the website itself?&lt;/p&gt;
+&lt;h1 id=&#34;prelude&#34;&gt;Prelude&lt;/h1&gt;
+&lt;p&gt;I&amp;rsquo;ve been meanin&lt;/p&gt;
+</description>
+	</item>
+	
+	<item>
 		<title>Kinoer</title>
 		<link>https://huvarda.github.io/blogs/kinoer/</link>
 		<pubDate>Fri, 02 May 2025 19:40:46 -0400</pubDate>
 		
 		<guid>https://huvarda.github.io/blogs/kinoer/</guid>
 		<description></description>
-	</item>
-	
-	<item>
-		<title>Kino</title>
-		<link>https://huvarda.github.io/kino/</link>
-		<pubDate>Fri, 02 May 2025 19:37:58 -0400</pubDate>
-		
-		<guid>https://huvarda.github.io/kino/</guid>
-		<description></description>
-	</item>
-	
-	<item>
-		<title>Awesome</title>
-		<link>https://huvarda.github.io/awesome/</link>
-		<pubDate>Fri, 02 May 2025 19:34:50 -0400</pubDate>
-		
-		<guid>https://huvarda.github.io/awesome/</guid>
-		<description></description>
-	</item>
-	
-	<item>
-		<title>poopy</title>
-		<link>https://huvarda.github.io/projects/pingas/</link>
-		<pubDate>Fri, 18 Apr 2025 14:23:36 -0400</pubDate>
-		
-		<guid>https://huvarda.github.io/projects/pingas/</guid>
-		<description>&lt;p&gt;awesome&lt;/p&gt;
-&lt;p&gt;homepage stuffs&lt;/p&gt;
-</description>
 	</item>
 	
 	</channel>

@@ -1,7 +1,8 @@
 .article_categories {
-	display:flex;
+	display:grid;
 	align-items:center;
-justify-content: center;
+	justify-content: center;
+	grid-template-columns: auto auto;
 }
 
 .category {
@@ -11,6 +12,12 @@ justify-content: center;
 	min-height: 150px;
 	padding:0px 20px 10px;
 	margin:20px;
+}
+
+@media all and (max-width: 700px) {
+	.article_categories {
+		grid-template-columns: auto;
+	}
 }
 
 a {
@@ -36,7 +43,7 @@ body {
 }
 
 main {
-	min-height: 1000px;
+	min-height: 800px;
 	min-width: 400px ;
 	max-width: 900px ;
 	padding-left: 20px;
@@ -49,6 +56,12 @@ main {
 
 img {
 	max-width: 100% ;
+}
+
+h1 {
+	text-align: left ;
+	font-size: 30px ;
+	text-transform: lowercase;
 }
 
 header h1 {
