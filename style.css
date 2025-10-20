@@ -12,6 +12,7 @@
 	min-height: 150px;
 	padding:0px 20px 10px;
 	margin:20px;
+	line-height: 1;
 }
 
 @media all and (max-width: 700px) {
@@ -21,7 +22,8 @@
 }
 
 a {
-	color: #00c7fe;
+	/*color: #00c7fe;*/
+	color: #b6f7f7;
 }
 
 body {
@@ -43,12 +45,16 @@ body {
 }
 
 main {
-	min-height: 800px;
+	min-height: 750px;
 	min-width: 400px ;
-	max-width: 900px ;
+	max-width: 850px ;
 	padding-left: 20px;
 	padding-right: 20px;
 	padding-top: 1px;
+
+	padding-bottom: 10px;
+
+	line-height: 1.5;
 
 	background: #1b1725 ;
 	margin: auto ;
@@ -59,15 +65,15 @@ img {
 }
 
 h1 {
-	text-align: left ;
-	font-size: 30px ;
-	text-transform: lowercase;
+	text-align: center ;
+	font-size: 35px ;
 }
+
 
 header h1 {
 	text-align: left ;
+	line-height: 1;
 	font-size: 50px ;
-	text-transform: lowercase;
 }
 
 footer {

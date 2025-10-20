@@ -1,38 +1,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
 	<title>Huvarda&#39;s Website</title>
-	<link>https://huvarda.github.io/projects/</link>
-	<description>Recent content in Projects on Huvarda&#39;s Website</description>
+	<link>http://localhost:1313/categories/blogs/</link>
+	<description>Recent content in Blogs on Huvarda&#39;s Website</description>
 	<generator>Hugo -- gohugo.io</generator>
 	<language>en-us</language>
-	<lastBuildDate>Sun, 28 Sep 2025 05:12:24 -0400</lastBuildDate>
+	<lastBuildDate>Wed, 03 Sep 2025 19:40:49 -0400</lastBuildDate>
     
-        <atom:link href="https://huvarda.github.io/projects/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="http://localhost:1313/categories/blogs/index.xml" rel="self" type="application/rss+xml" />
 	
-	
-	<item>
-		<title>kino test</title>
-		<link>https://huvarda.github.io/blogs/blah/</link>
-		<pubDate>Sun, 19 Oct 2025 19:40:49 -0400</pubDate>
-		
-		<guid>https://huvarda.github.io/blogs/blah/</guid>
-		<description>&lt;p&gt;this is an article to test various things&lt;/p&gt;
-&lt;h1 id=&#34;this-is-a-heading&#34;&gt;this is a heading&lt;/h1&gt;
-&lt;h2 id=&#34;blahblahblah&#34;&gt;blahblahblah&lt;/h2&gt;
-&lt;h3 id=&#34;more-sub-heading&#34;&gt;more sub-heading&lt;/h3&gt;
-&lt;h4 id=&#34;even-subber-heading&#34;&gt;even subber heading&lt;/h4&gt;
-&lt;h5 id=&#34;the-subbest-heading-at-this-point-the-text-is-basically-just-bold-lol&#34;&gt;the subbest heading at this point the text is basically just bold Lol&lt;/h5&gt;
-&lt;h6 id=&#34;nah-jk-this-is-the-subbest-heading&#34;&gt;nah jk this is the subbest heading&lt;/h6&gt;
-&lt;p&gt;&lt;img src=&#34;https://huvarda.github.io/kino.jpg&#34; alt=&#34;dr house&#34;&gt;&lt;/p&gt;
-</description>
-	</item>
 	
 	<item>
 		<title>MTH411 Chapter 1 Notes</title>
-		<link>https://huvarda.github.io/notes/ch1/</link>
+		<link>http://localhost:1313/notes/ch1/</link>
 		<pubDate>Wed, 15 Oct 2025 13:54:39 -0400</pubDate>
 		
-		<guid>https://huvarda.github.io/notes/ch1/</guid>
+		<guid>http://localhost:1313/notes/ch1/</guid>
 		<description>&lt;p&gt;using this mainly as a test to see how latex looks&lt;/p&gt;
 &lt;h1 id=&#34;sample-spaces&#34;&gt;Sample Spaces&lt;/h1&gt;
 &lt;ul&gt;
@@ -44,7 +27,7 @@
 &lt;ul&gt;
 &lt;li&gt;An event is said to occur if the outcome belongs to the event&lt;/li&gt;
 &lt;li&gt;An event E is the subset of another event F if when E happens, F also happens&lt;/li&gt;
-&lt;li&gt;An event is called the intersection of events if it occurs only when both events occur simultaneously&lt;/li&gt;
+&lt;li&gt;An event is called the intersection of events if it occurs only when both events occur simultaniously&lt;/li&gt;
 &lt;li&gt;Likewise, an event is the union if at least one of them occurs&lt;/li&gt;
 &lt;li&gt;Complement: everything outside of E&lt;/li&gt;
 &lt;li&gt;Difference: If in E-F, it means it is both in E and not in F&lt;/li&gt;
@@ -88,6 +71,19 @@ P can be considered a probability model.&lt;/li&gt;
 &lt;h1 id=&#34;selection-from-interval&#34;&gt;Selection from Interval&lt;/h1&gt;
 &lt;p&gt;A point is said to be randomly selected from an interval (a, b) if any two subintervals of (a, b) that have the same length are equally likely to include the point. The probability associated with the event that the subinterval (α, β) contains the point is defined to be (β − α)/(b − a).&lt;/p&gt;
 &lt;p&gt;The probability of selecting a specific value is 0.&lt;/p&gt;
+</description>
+	</item>
+	
+	<item>
+		<title>kino test 2 nondraftkings</title>
+		<link>http://localhost:1313/blogs/blah/</link>
+		<pubDate>Wed, 03 Sep 2025 19:40:49 -0400</pubDate>
+		
+		<guid>http://localhost:1313/blogs/blah/</guid>
+		<description>&lt;p&gt;test lalala 123&lt;/p&gt;
+&lt;h1 id=&#34;this-is-a-ntheading&#34;&gt;this is a ntheading&lt;/h1&gt;
+&lt;h2 id=&#34;blahblahblah&#34;&gt;blahblahblah&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/kino.png&#34; alt=&#34;kino&#34;&gt;&lt;/p&gt;
 </description>
 	</item>
 	
