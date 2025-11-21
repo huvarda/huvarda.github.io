@@ -11,6 +11,73 @@
 	
 	
 	<item>
+		<title>Introduction to Advanced Movement in IWBTG Fangames</title>
+		<link>https://huvarda.github.io/blogs/fangame-intro/</link>
+		<pubDate>Fri, 21 Nov 2025 00:00:00 +0000</pubDate>
+		
+		<guid>https://huvarda.github.io/blogs/fangame-intro/</guid>
+		<description>&lt;p&gt;This is a short intro into some more advanced movement techniques in fangames. Making this because for me personally, finding how a lot of this stuff worked took a while and required going through a bunch of 10+ year old youtube videos and forum posts.&lt;/p&gt;
+&lt;h1 id=&#34;things-you-already-probably-know&#34;&gt;Things You Already Probably Know&lt;/h1&gt;
+&lt;h2 id=&#34;basic-controls&#34;&gt;Basic Controls&lt;/h2&gt;
+&lt;p&gt;Use the left and right arrow keys to move around, shift to jump, z to shoot. Press shift again while in the air to double jump.&lt;/p&gt;
+&lt;h2 id=&#34;water&#34;&gt;Water&lt;/h2&gt;
+&lt;p&gt;Water controls the same as usual but you fall slower and have infinite double jump as long as you&amp;rsquo;re submerged.&lt;/p&gt;
+&lt;h2 id=&#34;platforms&#34;&gt;Platforms&lt;/h2&gt;
+&lt;p&gt;Platforms are half a block tall and you can pass through them from below. Passing through a platform also regenerates your double jump.&lt;/p&gt;
+&lt;h2 id=&#34;vines&#34;&gt;Vines&lt;/h2&gt;
+&lt;p&gt;Of the &amp;ldquo;main&amp;rdquo; gameplay mechanics, these were the most counterintuitive to understand at first. To &amp;ldquo;stick to&amp;rdquo; a vine, you need to jump towards the wall the vine is on and keep holding down shift even as you&amp;rsquo;re on the wall. Now when you press the arrow key opposite to the wall you&amp;rsquo;re on, you jump without spending your double jump. When I first started playing I would just press shift every time I wanted to jump off a vine and get confused on why I was losing my double jump.&lt;/p&gt;
+&lt;h1 id=&#34;jumping&#34;&gt;Jumping&lt;/h1&gt;
+&lt;p&gt;Fangames generally run at 50 fps and player input is tied to framerate. Depending on how many frames you hold shift down, you will go higher. The maximum height you can reach on your first jump is a 23-frame jump and the max height of your doublejump is 19frames.  On most keyboards the shortest jump you can reasonably input is the 2 frame jump however 1 frame jumps are possible using jump cancelling, which I&amp;rsquo;ll talk about later.&lt;/p&gt;
+&lt;h1 id=&#34;alignments&#34;&gt;Alignments&lt;/h1&gt;
+&lt;h2 id=&#34;horizontal-aligns&#34;&gt;Horizontal Aligns&lt;/h2&gt;
+&lt;p&gt;The Kid moves 3 pixels per second, but his hitbox is 11 pixels wide, and blocks are 32 pixels wide. By running into a wall, you can make the kid move 1 or 2 pixels, changing the way you are aligned to the world. Some jumps in certain locations can be impossible if you don&amp;rsquo;t have the right align, and in general it&amp;rsquo;s always easier to jump with correct aligns. There are charts online on the best aligns for certain jumps, but in practice most of the time you&amp;rsquo;ll probably end up running into random walls before jumping or copying somebody else&amp;rsquo;s aligns from a youtube video. As a rule of thumb the best practice is to find the align that lets you get as close as possible to the spike. Here&amp;rsquo;s a graphic I found online for best aligns for common jump types.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://huvarda.github.io/iwanna_images/1.png&#34; alt=&#34;h&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;vertical-aligns&#34;&gt;Vertical Aligns&lt;/h2&gt;
+&lt;p&gt;These are even more confusing and they don&amp;rsquo;t really matter much for a majority of fangames, but basically the kid&amp;rsquo;s y position is a floating point value, and with the way gravity is calculated, there is some error. From what I gather there&amp;rsquo;s not a consistent way to get correct good vertical aligns and you can&amp;rsquo;t even see what your vertical align is in most games, but I figured I should still mention them on the topic of aligns.&lt;/p&gt;
+&lt;h2 id=&#34;vertical-pixel-strings&#34;&gt;Vertical Pixel Strings&lt;/h2&gt;
+&lt;p&gt;Because the game runs at 50 fps and collisions/movement are calculated on a discrete frame-by-frame basis, the height at which you fall from can determine whether you get hit by something or not (since your hitbox may not ever technically be colliding). To understand this better, check out the gif below&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://huvarda.github.io/iwanna_images/fstring.gif&#34; alt=&#34;h&#34;&gt;&lt;/p&gt;
+&lt;p&gt;As you can see, despite hugging the wall in all 3 instances, only the 2 block high drop allows you to fall through without hitting the spike.&lt;/p&gt;
+&lt;h1 id=&#34;jump-cancelling&#34;&gt;Jump Cancelling&lt;/h1&gt;
+&lt;p&gt;You probably have 2 shift keys on your keyboard, meaning if you hold down one of them and release it the moment you press the other, you can trick the game into performing a 1 frame jump. However this can be difficult to use as the timing is strict. You can even chain jump cancels together binding more than 2 shift keys but that goes beyond the scope of this basic intro.&lt;/p&gt;
+&lt;h2 id=&#34;numpad-cancelling&#34;&gt;Numpad Cancelling&lt;/h2&gt;
+&lt;p&gt;Due to the weird way shift reacts with the numpad keys, you can actually do 1-frame jumps much easier by:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Pressing and holding shift to start jumping&lt;/li&gt;
+&lt;li&gt;Instead of releasing shift to end your jump, press a numpad key instead&lt;/li&gt;
+&lt;li&gt;Keep holding the numpad key and release shift at the moment you want to do the 1frame jump&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;It takes a bit of getting used to, and you&amp;rsquo;re unable to change directions while doing it but in general numpad cancelling can help a lot with certain kinds of jumps&lt;/p&gt;
+&lt;h3 id=&#34;autohotkey&#34;&gt;AutoHotKey&lt;/h3&gt;
+&lt;p&gt;Depending on your keyboard it can be tricky to reach one of the numpad keys. What I did was make a script using AutoHotKey (a program that lets you remap keys and more) to bind my up arrow key to numpad 0.&lt;/p&gt;
+&lt;h1 id=&#34;bunnyhopping&#34;&gt;Bunnyhopping&lt;/h1&gt;
+&lt;p&gt;Bunnyhopping is when you jump on the exact frame you&amp;rsquo;ve landed on the floor. Since you can temporarily be &amp;ldquo;inside&amp;rdquo; the floor for a frame as the game is calculating that you need to be pushed back up, this can give you a slightly higher jump.&lt;/p&gt;
+&lt;h1 id=&#34;common-jumps&#34;&gt;Common Jumps&lt;/h1&gt;
+&lt;p&gt;To finish off this post, I wanna go over the names and strategies for some of the common jump types you&amp;rsquo;ll see.&lt;/p&gt;
+&lt;h2 id=&#34;diagonals&#34;&gt;Diagonals&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://huvarda.github.io/iwanna_images/2.png&#34; alt=&#34;h&#34;&gt;
+Probably the most common type of jump. Not much to say except Jump Through It Lol.&lt;/p&gt;
+&lt;h2 id=&#34;corners&#34;&gt;Corners&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://huvarda.github.io/iwanna_images/3.png&#34; alt=&#34;h&#34;&gt;
+Corners are also very common. You&amp;rsquo;ll get used to them but align matters a bit more.&lt;/p&gt;
+&lt;h2 id=&#34;gate&#34;&gt;Gate&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://huvarda.github.io/iwanna_images/4.png&#34; alt=&#34;h&#34;&gt;
+Just use a 4 or 5 frame jump to get through.&lt;/p&gt;
+&lt;h2 id=&#34;diamond&#34;&gt;Diamond&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://huvarda.github.io/iwanna_images/5.png&#34; alt=&#34;h&#34;&gt;
+Two gates right next to each other, called a diamond because of the shape formed in the negative space between the spikes. Jump past the first set of spikes and &amp;ldquo;dip&amp;rdquo; between the middle of the bottom spikes, then do a 2 or 3 frame jump, or alternatively just numpad cancel through it.&lt;/p&gt;
+&lt;h2 id=&#34;double-diamond&#34;&gt;Double Diamond&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://huvarda.github.io/iwanna_images/6.png&#34; alt=&#34;h&#34;&gt;
+A very tricky jump, you need to do a 5 frame jump followed by a 2 frame jump as you get really close to the middle spike.&lt;/p&gt;
+&lt;h2 id=&#34;planes&#34;&gt;Planes&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://huvarda.github.io/iwanna_images/7.png&#34; alt=&#34;h&#34;&gt;
+These jumps are also very precise. However there is a nice strat for the 2-block high plane jump, where if you align yourself on the wall to the left, you can simply hold right and jump until you get past the left spike and use your double jump to clear it.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://huvarda.github.io/iwanna_images/plane.gif&#34; alt=&#34;h&#34;&gt;&lt;/p&gt;
+&lt;p&gt;So yeah, that&amp;rsquo;s my intro to some fangames concepts, hope ya found this helpful!&lt;/p&gt;
+</description>
+	</item>
+	
+	<item>
 		<title>No, We&#39;re Not That Stupid</title>
 		<link>https://huvarda.github.io/blogs/potato/</link>
 		<pubDate>Tue, 21 Oct 2025 00:00:00 +0000</pubDate>
