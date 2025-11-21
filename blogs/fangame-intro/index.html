@@ -37,13 +37,13 @@ Use the left and right arrow keys to move around, shift to jump, z to shoot. Pre
 <h2 id="vines">Vines</h2>
 <p>Of the &ldquo;main&rdquo; gameplay mechanics, these were the most counterintuitive to understand at first. To &ldquo;stick to&rdquo; a vine, you need to jump towards the wall the vine is on and keep holding down shift even as you&rsquo;re on the wall. Now when you press the arrow key opposite to the wall you&rsquo;re on, you jump without spending your double jump. When I first started playing I would just press shift every time I wanted to jump off a vine and get confused on why I was losing my double jump.</p>
 <h1 id="jumping">Jumping</h1>
-<p>Fangames generally run at 50 fps and player input is tied to framerate. Depending on how many frames you hold shift down, you will go higher. The maximum height you can reach on your first jump is a 23-frame jump and the max height of your doublejump is 19frames.  On most keyboards the shortest jump you can reasonably input is the 2 frame jump however 1 frame jumps are possible using jump cancelling, which I&rsquo;ll talk about later.</p>
+<p>Fangames generally run at 50 fps and player input is tied to framerate. Depending on how many frames you hold shift down, you will go higher. The maximum height you can reach on your first jump is a 23-frame jump and the max height of your doublejump is 19frames.  On a lot of keyboards the shortest jump you can reasonably input is the 2 frame jump however 1 frame jumps are possible using jump cancelling, which I&rsquo;ll talk about later.</p>
 <h1 id="alignments">Alignments</h1>
 <h2 id="horizontal-aligns">Horizontal Aligns</h2>
 <p>The Kid moves 3 pixels per second, but his hitbox is 11 pixels wide, and blocks are 32 pixels wide. By running into a wall, you can make the kid move 1 or 2 pixels, changing the way you are aligned to the world. Some jumps in certain locations can be impossible if you don&rsquo;t have the right align, and in general it&rsquo;s always easier to jump with correct aligns. There are charts online on the best aligns for certain jumps, but in practice most of the time you&rsquo;ll probably end up running into random walls before jumping or copying somebody else&rsquo;s aligns from a youtube video. As a rule of thumb the best practice is to find the align that lets you get as close as possible to the spike. Here&rsquo;s a graphic I found online for best aligns for common jump types.</p>
 <p><img src="/iwanna_images/1.png" alt="h"></p>
 <h2 id="vertical-aligns">Vertical Aligns</h2>
-<p>These are even more confusing and they don&rsquo;t really matter much for a majority of fangames, but basically the kid&rsquo;s y position is a floating point value, and with the way gravity is calculated, there is some error. From what I gather there&rsquo;s not a consistent way to get correct good vertical aligns and you can&rsquo;t even see what your vertical align is in most games, but I figured I should still mention them on the topic of aligns.</p>
+<p>These are even more confusing and they don&rsquo;t really matter much for a majority of fangames, but basically the kid&rsquo;s y position is a floating point value, and with the way gravity is calculated, there is some subpixel remainder that can affect your next jump once you land. There are some methods of getting valigns consistently that fall beyond the scope of this introductory piece but I figured I should still mention them on the topic of aligns.</p>
 <h2 id="vertical-pixel-strings">Vertical Pixel Strings</h2>
 <p>Because the game runs at 50 fps and collisions/movement are calculated on a discrete frame-by-frame basis, the height at which you fall from can determine whether you get hit by something or not (since your hitbox may not ever technically be colliding). To understand this better, check out the gif below</p>
 <p><img src="/iwanna_images/fstring.gif" alt="h"></p>
@@ -59,9 +59,9 @@ Use the left and right arrow keys to move around, shift to jump, z to shoot. Pre
 </ol>
 <p>It takes a bit of getting used to, and you&rsquo;re unable to change directions while doing it but in general numpad cancelling can help a lot with certain kinds of jumps</p>
 <h3 id="autohotkey">AutoHotKey</h3>
-<p>Depending on your keyboard it can be tricky to reach one of the numpad keys. What I did was make a script using AutoHotKey (a program that lets you remap keys and more) to bind my up arrow key to numpad 0.</p>
+<p>Depending on your keyboard it can be tricky to reach one of the numpad keys. What I did was make a script using AutoHotKey (a program that lets you remap keys and more) to bind my up arrow key to numpad 0. (Note that rebinding numpad keys can act weird so play around with it before leaving it a certain way.)</p>
 <h1 id="bunnyhopping">Bunnyhopping</h1>
-<p>Bunnyhopping is when you jump on the exact frame you&rsquo;ve landed on the floor. Since you can temporarily be &ldquo;inside&rdquo; the floor for a frame as the game is calculating that you need to be pushed back up, this can give you a slightly higher jump.</p>
+<p>Bunnyhopping is when you jump on the exact frame you&rsquo;ve landed on the floor in a way that can let you get a slightly higher jump right afterwards.</p>
 <h1 id="common-jumps">Common Jumps</h1>
 <p>To finish off this post, I wanna go over the names and strategies for some of the common jump types you&rsquo;ll see.</p>
 <h2 id="diagonals">Diagonals</h2>
@@ -69,7 +69,7 @@ Use the left and right arrow keys to move around, shift to jump, z to shoot. Pre
 Probably the most common type of jump. Not much to say except Jump Through It Lol.</p>
 <h2 id="corners">Corners</h2>
 <p><img src="/iwanna_images/3.png" alt="h">
-Corners are also very common. You&rsquo;ll get used to them but align matters a bit more.</p>
+Corners are also very common. You&rsquo;ll get used to them but align matters more than for diagonals. Especially for ground corners like the one in the image, the wrong align straight up won&rsquo;t allow you to jump past.</p>
 <h2 id="gate">Gate</h2>
 <p><img src="/iwanna_images/4.png" alt="h">
 Just use a 4 or 5 frame jump to get through.</p>
@@ -78,7 +78,7 @@ Just use a 4 or 5 frame jump to get through.</p>
 Two gates right next to each other, called a diamond because of the shape formed in the negative space between the spikes. Jump past the first set of spikes and &ldquo;dip&rdquo; between the middle of the bottom spikes, then do a 2 or 3 frame jump, or alternatively just numpad cancel through it.</p>
 <h2 id="double-diamond">Double Diamond</h2>
 <p><img src="/iwanna_images/6.png" alt="h">
-A very tricky jump, you need to do a 5 frame jump followed by a 2 frame jump as you get really close to the middle spike.</p>
+A very tricky jump. There are a few ways to pass, but I personally find the most consistent way is by doing a 5 frame jump followed by a 2 frame jump as you get really close to the middle spike.</p>
 <h2 id="planes">Planes</h2>
 <p><img src="/iwanna_images/7.png" alt="h">
 These jumps are also very precise. However there is a nice strat for the 2-block high plane jump, where if you align yourself on the wall to the left, you can simply hold right and jump until you get past the left spike and use your double jump to clear it.</p>
