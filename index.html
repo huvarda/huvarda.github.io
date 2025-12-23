@@ -14,17 +14,44 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="robots" content="index, follow">
 	<meta charset="utf-8">
+
+
+<script>
+(function () {
+  const params = new URLSearchParams(window.location.search);
+
+  if (params.get("serious") === "true") {
+    document.documentElement.classList.add("serious");
+  }
+})();
+</script>
+
+
 </head>
 
 <body class="homepage">
 
 
 <main>
-<header><h1 id="tag_huvarda&#39;s website"><h1>huvarda's website</h1></h1></header>
+<header><h1 id="tag_huvarda&#39;s website"><h1 id="website_title">huvarda's website</h1></h1></header>
 <article>
-<hr style="height:10px;border-width:0;background-color:#7d7cfe">
-<p>Hello, welcome to my site! Here you can find projects I&rsquo;ve worked on, my opinions on Stuff, some of my class notes if you are so inclined, and more!</p>
+<hr>
+<br>
+<div class="unserious_title">
+Hello, welcome to my site! Here you can find projects I’ve worked on, my opinions on Stuff, some of my class notes if you are so inclined, and more!
+</div>
+<div class="serious_title">
+Hello, welcome to my site! My name is Emir, and I'm currently a junior pursuing computer science. 
+On this site you can find a list of projects I've worked on, as well as a bit of insight in the process it took to make them.
+Alternatively feel free to check out the <a id="return_to_unserious" href="https://huvarda.github.io/">normal</a> version of the site if you're instead 
+interested in seeing my personality, interests, and more.
+</div>
 
+
+<div class="serious_category"><time datetime="2025-12-23T00:00:00Z">2025 Dec 23</time> &ndash; <a href="/projects/website/">This Website</a>
+	
+	
+</div>
 
 <div class="article_categories">
 
@@ -59,15 +86,23 @@ dump of notes from obsidian.md (since this website is built with hugo i can get 
 </div>
 </div>
 
+<div class="latest_posts">
 <h2>latest posts</h2>
-<ul><li><time datetime="2025-11-21T00:00:00Z">2025 Nov 21</time> &ndash; <a href="/blogs/fangame-intro/">Introduction to Advanced Movement in IWBTG Fangames</a>
+<ul><li><time datetime="2025-12-23T00:00:00Z">2025 Dec 23</time> &ndash; <a href="/projects/website/">This Website</a>
+	
+	</li><li><time datetime="2025-11-21T00:00:00Z">2025 Nov 21</time> &ndash; <a href="/blogs/fangame-intro/">Introduction to Advanced Movement in IWBTG Fangames</a>
 	
 	</li><li><time datetime="2025-10-21T00:00:00Z">2025 Oct 21</time> &ndash; <a href="/blogs/potato/">No, We&#39;re Not That Stupid</a>
 	
 	</li><li><time datetime="2025-10-19T19:40:49-04:00">2025 Oct 19</time> &ndash; <a href="/blogs/blah/">kino test</a>
 	
+	</li><li><time datetime="2025-10-15T13:54:39-04:00">2025 Oct 15</time> &ndash; <a href="/notes/ch1/">MTH411 Chapter 1 Notes</a>
+	
 	</li>
 </ul>
+</div>
+<div id="nextprev_buttons">
+</div>
 
 </article>
 </main>
@@ -75,6 +110,26 @@ dump of notes from obsidian.md (since this website is built with hugo i can get 
 <footer>
 	<a href="https://huvarda.github.io/">https://huvarda.github.io/</a>
 </footer>
+
+
+
+
+<script>
+(function () {
+  const params = new URLSearchParams(window.location.search);
+
+  if (params.get("serious") === "true") {
+    document.querySelectorAll("a").forEach(link => {
+      if (link.id !== "return_to_unserious" && !link.getAttribute("href").includes("serious=true")) {
+        const href = link.getAttribute("href");
+        link.setAttribute("href", href+"?serious=true");
+      }
+    })
+
+    document.getElementById("website_title").textContent="Emir's Portfolio";
+  }
+})();
+</script>
 
 </body>
 </html>

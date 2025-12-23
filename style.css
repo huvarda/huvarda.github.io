@@ -26,6 +26,13 @@ a {
 	color: #b6f7f7;
 }
 
+
+hr {
+  height:10px;
+  border-width:0;
+  background-color:#7d7cfe;
+}
+
 body {
 	font-family: sans-serif ;
 	color: #fff ;
@@ -83,6 +90,68 @@ footer {
 	color: #000000;
 	vertical-align: bottom;
 	clear: both ;
+}
+
+
+
+
+html.serious body {
+  background-color: #121212;
+  background-image: none;
+  color: #eee;
+}
+
+html.serious main {
+  background: #1e1e1e ;
+}
+
+.serious_category {
+  display: none;
+}
+
+html.serious .serious_category {
+  display: block;
+  background-color: #333333;
+  padding:20px 20px 20px;
+  margin:20px;
+  line-height: 1;
+}
+
+html.serious .category {
+  display: none;
+}
+
+html.serious .latest_posts {
+  display: none;
+}
+
+html.serious hr {
+  background-color:#101010;
+}
+
+html.serious .unserious_title {
+  display: none;
+}
+
+.serious_title {
+  display: none;
+}
+
+html.serious .serious_title {
+  display: block;
+}
+
+/*awesome way to make it so in serious mode you only get projects in nextprev*/
+#nextprev_section {
+  display: none;
+}
+
+html.serious #nextprev_section {
+	display: block;
+}
+
+html.serious #nextprev {
+  display: none;
 }
 
 /* For TAGLIST.HTML */

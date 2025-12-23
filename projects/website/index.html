@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  
+
+	<title>This Website | Huvarda&#39;s Website</title>
+	<link rel="canonical" href="https://huvarda.github.io/">
+	<link rel='alternate' type='application/rss+xml' title="Huvarda&#39;s Website RSS" href='/index.xml'>
+	<link rel='stylesheet' type='text/css' href='/style.css'>
+	<link rel="icon" href="/favicon.ico">
+	<meta name="description" content="Now that it&rsquo;s my winter break and I have plenty more free time I feel like now&rsquo;s the perfect time to begin documenting my projects, and where better to start than the making of this website itself?
+I&rsquo;d been wanting to make a new website for some time now. I had made one back in high school using a generic template I found online but I had kinda half-assed that one. It was extremely tedious to update since I was changing the sidebar, menus etc. on each page manually, and I only had a tenuous grasp of CSS. Not to mention the whole website was basically doxxing me, whereas I wanted one that was at least a degree separate from my IRL self.">
+	<meta name="keywords" content="projects">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="robots" content="index, follow">
+	<meta charset="utf-8">
+
+
+<script>
+(function () {
+  const params = new URLSearchParams(window.location.search);
+
+  if (params.get("serious") === "true") {
+    document.documentElement.classList.add("serious");
+  }
+})();
+</script>
+
+
+</head>
+
+<body>
+
+
+<main>
+<header><h1 id="tag_This Website">This Website</h1></header>
+<article>
+
+<p>Now that it&rsquo;s my winter break and I have plenty more free time I feel like now&rsquo;s the perfect time to begin documenting my projects, and where better to start than the making of this website itself?</p>
+<p>I&rsquo;d been wanting to make a new website for some time now. I had made one back in high school using a generic template I found online but I had kinda half-assed that one. It was extremely tedious to update since I was changing the sidebar, menus etc. on each page manually, and I only had a tenuous grasp of CSS. Not to mention the whole website was basically doxxing me, whereas I wanted one that was at least a degree separate from my IRL self.</p>
+<p><img src="/website_images/oldahh.png" alt="old"></p>
+<p>Here&rsquo;s a screenshot of that old site. It was basically just a list of projects I&rsquo;d done, and I plan at some point in the future to port over a few of the pages here, with slight modifications and extra commentary.</p>
+<p>Anyways, I began looking into frameworks I could use to make my site. I wanted a basic static website that had limited to no Javascript, just text on a clean background that is easy to navigate and loads quickly. After some research, I came across <a href="https://gohugo.io/">HUGO</a>, and it was basically exactly what I wanted. HUGO is a framework that lets you write the content of your posts as markdown files, and it automatically formats them. It also makes it easy to generate &ldquo;list&rdquo; pages, buttons for next/previous posts, etc.</p>
+<p>I tried a few templates from the Themes section on HUGO&rsquo;s website but none of them were all that great, so I instead opted to make my own theme by starting off with an extremely barebones template and building off of that. Then came the fun part, actually designing the website. Before making this site, I thought I hated CSS, but what I realized was that I had been writing CSS &lsquo;incorrectly&rsquo;. Instead of eyeballing the CSS like I did back when I was just blindly following tutorials, this time I took a more methodical approach. I first made a color scheme. I then found a website called &lsquo;Penpot&rsquo;, a free alternative to Figma, to lay out my design.</p>
+<p><img src="/website_images/penpot.png" alt="old"></p>
+<p>I tried to keep the colors simple, with a basic dark theme. I made the main &lsquo;category&rsquo; divs on the homepage the color I use in Geometry Dash icon set. The diagonal pattern in the background was inspired by the backgrounds of the Stage 5 substages in IWKTK3. I initially wanted to make it animated on all pages but realized it was distracting, so I kept it to only the home page.</p>
+<p>When it came to implementing this in CSS, it was far more straightforward than I expected. The only hiccup was with the diagonal background. At first I tried to do it in pure CSS with gradients, but that ended up weirdly warping on the edges of the screen, so I canned that. In the end I just made a small image, tiled it, and animated that instead.</p>
+<p>All that was left to do was lay out the homepage and I was done. Or so I thought. I showed the site to my father and he brought up an interesting point. Who is the site for? Well, myself obviously, but also I was planning on sharing this website with recruiters as a sort of portfolio. So I decided, as a last step (which ended up being the most difficult to figure out!), to make a sort of &ldquo;serious mode&rdquo; with a slightly more detailed blurb on the homepage and a higher emphasis on the &lsquo;projects&rsquo; section compared to everything else. To achieve that, I made it so that if &ldquo;serious=true&rdquo; is in the query string of the url, there is a tiny script that adds the class &lsquo;serious&rsquo; to the html element. The rest of the logic is handled by hiding/showing various elements in pure CSS. If you&rsquo;re checking the site out normally and want to see the &lsquo;serious&rsquo; version, click <a href="/?serious=true">here</a>.</p>
+<p>So yeah, that&rsquo;s a bit of insight into how I made this website!</p>
+
+
+<div id="nextprev_buttons">
+<div id="nextprev">
+<a href="/blogs/fangame-intro/"><div id="prevart">Previous:<br>Introduction to Advanced Movement in IWBTG Fangames</div></a>
+</div>
+</div>
+<div style="clear:both" class=taglist>Related<br><a id="tag_projects" href="https://huvarda.github.io/tags/projects">Projects</a></div>
+</article>
+</main>
+
+<footer>
+	<a href="https://huvarda.github.io/">https://huvarda.github.io/</a>
+</footer>
+
+
+
+
+<script>
+(function () {
+  const params = new URLSearchParams(window.location.search);
+
+  if (params.get("serious") === "true") {
+    document.querySelectorAll("a").forEach(link => {
+      if (link.id !== "return_to_unserious" && !link.getAttribute("href").includes("serious=true")) {
+        const href = link.getAttribute("href");
+        link.setAttribute("href", href+"?serious=true");
+      }
+    })
+
+    document.getElementById("website_title").textContent="Emir's Portfolio";
+  }
+})();
+</script>
+
+</body>
+</html>

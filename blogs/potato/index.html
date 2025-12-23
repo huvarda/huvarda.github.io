@@ -17,6 +17,19 @@ At a glance this sounds extremely concerning. I mean come on, they&rsquo;re lite
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="robots" content="index, follow">
 	<meta charset="utf-8">
+
+
+<script>
+(function () {
+  const params = new URLSearchParams(window.location.search);
+
+  if (params.get("serious") === "true") {
+    document.documentElement.classList.add("serious");
+  }
+})();
+</script>
+
+
 </head>
 
 <body>
@@ -45,9 +58,15 @@ At a glance this sounds extremely concerning. I mean come on, they&rsquo;re lite
 <p>So there you have it. The journey of an unsubstantiated statistic from a generic corporate PR piece to another nugget of ragebait that&rsquo;ll be used to make fun of [guy i disagree with] for 2 days before swiftly being forgotten. If you enjoyed this, stick around! I plan on writing posts here more regularly (I say as I wrap up the first real post on this site lol).</p>
 
 
+<div id="nextprev_buttons">
 <div id="nextprev">
 <a href="/blogs/blah/"><div id="prevart">Previous:<br>kino test</div></a>
 <a href="/blogs/fangame-intro/"><div id="nextart">Next:<br>Introduction to Advanced Movement in IWBTG Fangames</div></a>
+</div>
+<div id="nextprev_section">
+<a href="/blogs/blah/"><div id="prevart">Previous:<br>kino test</div></a>
+<a href="/blogs/fangame-intro/"><div id="nextart">Next:<br>Introduction to Advanced Movement in IWBTG Fangames</div></a>
+</div>
 </div>
 <div style="clear:both" class=taglist>Related<br><a id="tag_favorites" href="https://huvarda.github.io/tags/favorites">Favorites</a></div>
 </article>
@@ -56,6 +75,26 @@ At a glance this sounds extremely concerning. I mean come on, they&rsquo;re lite
 <footer>
 	<a href="https://huvarda.github.io/">https://huvarda.github.io/</a>
 </footer>
+
+
+
+
+<script>
+(function () {
+  const params = new URLSearchParams(window.location.search);
+
+  if (params.get("serious") === "true") {
+    document.querySelectorAll("a").forEach(link => {
+      if (link.id !== "return_to_unserious" && !link.getAttribute("href").includes("serious=true")) {
+        const href = link.getAttribute("href");
+        link.setAttribute("href", href+"?serious=true");
+      }
+    })
+
+    document.getElementById("website_title").textContent="Emir's Portfolio";
+  }
+})();
+</script>
 
 </body>
 </html>

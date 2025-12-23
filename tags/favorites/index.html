@@ -13,6 +13,19 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="robots" content="index, follow">
 	<meta charset="utf-8">
+
+
+<script>
+(function () {
+  const params = new URLSearchParams(window.location.search);
+
+  if (params.get("serious") === "true") {
+    document.documentElement.classList.add("serious");
+  }
+})();
+</script>
+
+
 </head>
 
 <body>
@@ -30,6 +43,8 @@
 	
 	</li>
 </ul>
+<div id="nextprev_buttons">
+</div>
 
 </article>
 </main>
@@ -37,6 +52,26 @@
 <footer>
 	<a href="https://huvarda.github.io/">https://huvarda.github.io/</a>
 </footer>
+
+
+
+
+<script>
+(function () {
+  const params = new URLSearchParams(window.location.search);
+
+  if (params.get("serious") === "true") {
+    document.querySelectorAll("a").forEach(link => {
+      if (link.id !== "return_to_unserious" && !link.getAttribute("href").includes("serious=true")) {
+        const href = link.getAttribute("href");
+        link.setAttribute("href", href+"?serious=true");
+      }
+    })
+
+    document.getElementById("website_title").textContent="Emir's Portfolio";
+  }
+})();
+</script>
 
 </body>
 </html>
